@@ -1,0 +1,137 @@
+@import 'normalize';
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+
+$nav-bar-height: 100px;
+$content-height: 703px;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+// header">
+//     <
+// nav-bar
+// nav-bar__part1
+// nav-bar__link logo"></
+// nav-bar__part2
+// "nav-bar__part3
+
+
+.header {
+  background-color: #6C63FF;
+}
+
+
+.nav-bar {
+  height: 100px;
+  display: flex;
+  align-items: center;
+  padding: 0 17.1875%;
+
+  &__part1, &__part2, &__part3 {
+    list-style-type: none;
+    font-size: 24px;
+  }
+
+  // &__part1 {
+
+  // }
+
+  &__part2 {
+    display: flex;
+    justify-content: center;
+    flex: 1;
+  }
+
+  &__part3 {
+    display: flex;
+  }
+
+  &__link {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 24px;
+    text-transform: capitalize;
+    font-family: "Roboto", sans-serif;
+
+    &_sign-panel-right-margin {
+      margin-right: 60px;
+    }
+
+    &_nav-margins {
+      margin: 0 130px;
+    }
+  }
+
+  .logo {
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-size: 40px;
+    letter-spacing: 0.1em;
+  }
+}
+
+
+// content__info
+// content__header
+// content__subheader
+// content__paragraph
+// content__button
+
+
+.content {
+  height: 703px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 17.1875%;
+  // padding-right: 17.1875%;
+  // padding-left: 17.1875%;
+  // padding-top: calc((100vh - #{$nav-bar-height} - #{$content-height}) / 2);
+  // padding-bottom: calc((100vh - #{$nav-bar-height} - #{$content-height}) / 2);
+
+  &__heading {
+    font-family: "Roboto", sans-serif;
+    font-size: 90px;
+    font-weight: 700;
+    color: #2F2E41;
+    margin: 0;
+  }
+
+  &__subheading {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-size: 50px;
+    color: #666666;
+  }
+
+  &__paragraph {
+    font-family: "Roboto", sans-serif;
+    font-size: 30px;
+    font-weight: 400;
+    color: #2F2E41;
+  }
+
+  &__button {
+    font-family: "Roboto", sans-serif;
+    font-size: 30px;
+    letter-spacing: .03em;
+    font-weight: 400;
+    background-color: #59F17B;
+    border-radius: 30px;
+    width: 342px;
+    height: 90px;
+    color: #2F2E41;
+    border: none;
+    padding: 28px 80px;
+  }
+}
+
+.svg {
+  height: 703px;
+  width: 559px;
+}
