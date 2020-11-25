@@ -3,166 +3,620 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Wine Shop</title>
+  <title>Wine Delivery</title>
   <link rel="stylesheet" href="./static/css/style.css">
 </head>
 <body>
-  <header>
-    <nav class="nav-bar-container">
-      <ul class="nav-bar">
-        <li class="nav-bar__part"><a href="" class="nav-bar__link logo">le vin</a></li>
-        <li class="nav-bar__part nav-bar__part_main-links">
-          <div><a href="" class="nav-bar__link">prices</a></div>
-          <div><a href="" class="nav-bar__link">shop</a></div>
-          <div><a href="" class="nav-bar__link">about</a></div>
-        </li>
-        <li class="nav-bar__part">
-          <div><a href=""><img src="./static/img/cart.svg" alt="cart"></a></div>
-          <div><a href="" class="nav-bar__link">sign in</a></div>
-        </li>
-      </ul>
-    </nav>
 
-    <div class="header">
-      <div>
-        <h1 class="header__heading">Wine delievered...</h1>
-        <h2 class="header__heading_part">by robots</h2>
-        <ul class="header__guide">
-          <li class="header__instruction">— Choose the wine you like</li>
-          <li class="header__instruction">— And enjoy yourself</li>
-        </ul>
-        <div class="flex-container">
-          <button class="button">
-            <div class="button__green-circle">
-              <div class="button__arrow"></div>
-            </div>
-          </button>
-          <p class="header__call-to-action">Chooose<br/>wine now!</p>
-        </div>
-      </div>
-      <div>
-        <img src="./static//img/person__blue_wine.svg" alt="person driking wine">
-      </div>
+  <nav>
+    <ul class="navbar">
+      <li class="navbar__part"><a href="#" class="navbar__link logo">le vin</a></li>
+      <li class="navbar__part navbar__part_centered">
+        <a href="#" class="navbar__link">delivery</a>
+        <a href="#" class="navbar__link">shop</a>
+        <a href="#" class="navbar__link">robots</a>
+      </li>
+      <li class="navbar__part">
+        <img src="./static/img/cart.svg" alt="cart with the products chosen">
+        <a href="#" class="navbar__link">sign in</a>
+      </li>
+    </ul>
+  </nav>
+
+  <header class="header">
+    <div class="header__text">
+      <h1 class="header__heading">we deliver wine<br/><span class="header__subheading">and we are robots</span></h1>
+      <button class="header__button">choose</button>
     </div>
+    <img src="./static/img/header.svg" alt="man thinking on a bench and robots carrying wine to where it should be delivered" class="header__image">
   </header>
 
-  <main class="shop">
-    <h2 class="wines__heading">French</h2>
-    <aside class="shop__search">
-      <form action="" class="form">
-        <legend class="form__heading">Search by<br/>by parameters</legend>
-        <div>
-          <label for="year" class="form__input-label">Year</label>
-          <input type="number" min="1900" max="2020" id="year" name="year" class="form__input-field" placeholder="From 1900">
-        </div>
-        <div>
-          <label for="color" class="form__input-label">Color</label>
-          <select name="color" id="color" class="form__input-field">
-            <option value="red">Red</option>
-            <option value="white">White</option>
-            <option value="other">Other</option>
-          </select>
-        </div>
-        <div>
-          <label for="country" class="form__input-label">Country</label>
-          <select name="country" id="country" class="form__input-field">
-            <option value="country1">Country 1</option>
-            <option value="country2">Country 2</option>
-          </select>
-        </div>
-        <div>
-          <label for="price" placeholder="Up to" class="form__input-label">Price</label>
-          <input type="number" min="0" id="price" name="price" class="form__input-field" placeholder="Up to max">
-        </div>
-        <input type="submit" class="form__input-field form__submit-button">
-      </form>
-
-      <section class="wines">
-        <div class="found-wines">
-          <div class="wine">
-            <h3 class="wine__heading">Bordeux</h3>
-            <img src="./static/img/wine.png" alt="wine image" class="wine__image">
-            <div class="wine__buttons">
-              <button class="wine__see-more-info-button">See More</button>
-              <button class="wine__add-to-cart-button"></button>
-            </div>
-          </div>
-
-          <div class="wine">
-            <h3 class="wine__heading">Bordeux</h3>
-            <img src="./static/img/wine.png" alt="wine image" class="wine__image">
-            <div class="wine__buttons">
-              <button class="wine__see-more-info-button">See More</button>
-              <button class="wine__add-to-cart-button"></button>
-            </div>
-          </div>
-
-          <div class="wine">
-            <h3 class="wine__heading">Bordeux</h3>
-            <img src="./static/img/wine.png" alt="wine image" class="wine__image">
-            <div class="wine__buttons">
-              <button class="wine__see-more-info-button">See More</button>
-              <button class="wine__add-to-cart-button"></button>
-            </div>
-          </div>
-
-          <div class="wine">
-            <h3 class="wine__heading">Bordeux</h3>
-            <img src="./static/img/wine.png" alt="wine image" class="wine__image">
-            <div class="wine__buttons">
-              <button class="wine__see-more-info-button">See More</button>
-              <button class="wine__add-to-cart-button"></button>
-            </div>
-          </div>
-          
-          <div class="wine">
-            <h3 class="wine__heading">Bordeux</h3>
-            <img src="./static/img/wine.png" alt="wine image" class="wine__image">
-            <div class="wine__buttons">
-              <button class="wine__see-more-info-button">See More</button>
-              <button class="wine__add-to-cart-button"></button>
-            </div>
-          </div>
-
-          <div class="wine">
-            <h3 class="wine__heading">Bordeux</h3>
-            <img src="./static/img/wine.png" alt="wine image" class="wine__image">
-            <div class="wine__buttons">
-              <button class="wine__see-more-info-button">See More</button>
-              <button class="wine__add-to-cart-button"></button>
-            </div>
-          </div>
-
-          <div class="wine">
-            <h3 class="wine__heading">Bordeux</h3>
-            <img src="./static/img/wine.png" alt="wine image" class="wine__image">
-            <div class="wine__buttons">
-              <button class="wine__see-more-info-button">See More</button>
-              <button class="wine__add-to-cart-button"></button>
-            </div>
-          </div>
-
-          <div class="wine">
-            <h3 class="wine__heading">Bordeux</h3>
-            <img src="./static/img/wine.png" alt="wine image" class="wine__image">
-            <div class="wine__buttons">
-              <button class="wine__see-more-info-button">See More</button>
-              <button class="wine__add-to-cart-button"></button>
-            </div>
-          </div>
-
-          <div class="wine">
-            <h3 class="wine__heading">Bordeux</h3>
-            <img src="./static/img/wine.png" alt="wine image" class="wine__image">
-            <div class="wine__buttons">
-              <button class="wine__see-more-info-button">See More</button>
-              <button class="wine__add-to-cart-button"></button>
-            </div>
-          </div>
-        </div>
-      </section>
+  <main class="shop"> 
+    <aside class="search">
+      <h3 class="search__heading">search</h3>
+      <div class="search__field"></div>
+      <div class="search__field"></div>
+      <div class="search__field"></div>
+      <div class="search__field"></div>
+      <div class="search__submit"></div>
     </aside>
-
+    <section class="wines">
+      <div class="wines__heading-container">
+        <h2 class="wines__heading">italian wine</h2>
+      </div>
+      <div class="wines__found">
+        <div class="wine">
+          <div class="wine__left">
+            <img src="./static/img/sampleWine.jpg" alt="excelent wine" class="wine__image">
+            <button class="wine__add-to-cart"></button>
+          </div>
+          <div class="wine__right">
+            <div>
+              <h4 class="wine__name">WineName</h4>
+              <div class="wine__info">
+                <p class="wine__specs"><span class="wine__spec">year</span><span class="wine__value">1900</span></p>
+                <p class="wine__specs"><span class="wine__spec">year</span><span class="wine__value">1900</span></p>
+                <p class="wine__specs"><span class="wine__spec">year</span><span class="wine__value">1900</span></p>
+              </div>
+            </div>
+            <div class="wine__price">
+              <p>100$</p>
+            </div>
+          </div>
+        </div>
+        <div class="wine">
+          <div class="wine__left">
+            <img src="./static/img/sampleWine.jpg" alt="excelent wine" class="wine__image">
+            <button class="wine__add-to-cart"></button>
+          </div>
+          <div class="wine__right">
+            <div>
+              <h4 class="wine__name">WineName</h4>
+              <div class="wine__info">
+                <p class="wine__specs"><span class="wine__spec">year</span><span class="wine__value">1900</span></p>
+                <p class="wine__specs"><span class="wine__spec">year</span><span class="wine__value">1900</span></p>
+                <p class="wine__specs"><span class="wine__spec">year</span><span class="wine__value">1900</span></p>
+              </div>
+            </div>
+            <div class="wine__price">
+              <p>100$</p>
+            </div>
+          </div>
+        </div>
+        <div class="wine">
+          <div class="wine__left">
+            <img src="./static/img/sampleWine.jpg" alt="excelent wine" class="wine__image">
+            <button class="wine__add-to-cart"></button>
+          </div>
+          <div class="wine__right">
+            <div>
+              <h4 class="wine__name">WineName</h4>
+              <div class="wine__info">
+                <p class="wine__specs"><span class="wine__spec">year</span><span class="wine__value">1900</span></p>
+                <p class="wine__specs"><span class="wine__spec">year</span><span class="wine__value">1900</span></p>
+                <p class="wine__specs"><span class="wine__spec">year</span><span class="wine__value">1900</span></p>
+              </div>
+            </div>
+            <div class="wine__price">
+              <p>100$</p>
+            </div>
+          </div>
+        </div>
+        <div class="wine">
+          <div class="wine__left">
+            <img src="./static/img/sampleWine.jpg" alt="excelent wine" class="wine__image">
+            <button class="wine__add-to-cart"></button>
+          </div>
+          <div class="wine__right">
+            <div>
+              <h4 class="wine__name">WineName</h4>
+              <div class="wine__info">
+                <p class="wine__specs"><span class="wine__spec">year</span><span class="wine__value">1900</span></p>
+                <p class="wine__specs"><span class="wine__spec">year</span><span class="wine__value">1900</span></p>
+                <p class="wine__specs"><span class="wine__spec">year</span><span class="wine__value">1900</span></p>
+              </div>
+            </div>
+            <div class="wine__price">
+              <p>100$</p>
+            </div>
+          </div>
+        </div>
+        <div class="wine">
+          <div class="wine__left">
+            <img src="./static/img/sampleWine.jpg" alt="excelent wine" class="wine__image">
+            <button class="wine__add-to-cart"></button>
+          </div>
+          <div class="wine__right">
+            <div>
+              <h4 class="wine__name">WineName</h4>
+              <div class="wine__info">
+                <p class="wine__specs"><span class="wine__spec">year</span><span class="wine__value">1900</span></p>
+                <p class="wine__specs"><span class="wine__spec">year</span><span class="wine__value">1900</span></p>
+                <p class="wine__specs"><span class="wine__spec">year</span><span class="wine__value">1900</span></p>
+              </div>
+            </div>
+            <div class="wine__price">
+              <p>100$</p>
+            </div>
+          </div>
+        </div>
+        <div class="wine">
+          <div class="wine__left">
+            <img src="./static/img/sampleWine.jpg" alt="excelent wine" class="wine__image">
+            <button class="wine__add-to-cart"></button>
+          </div>
+          <div class="wine__right">
+            <div>
+              <h4 class="wine__name">WineName</h4>
+              <div class="wine__info">
+                <p class="wine__specs"><span class="wine__spec">year</span><span class="wine__value">1900</span></p>
+                <p class="wine__specs"><span class="wine__spec">year</span><span class="wine__value">1900</span></p>
+                <p class="wine__specs"><span class="wine__spec">year</span><span class="wine__value">1900</span></p>
+              </div>
+            </div>
+            <div class="wine__price">
+              <p>100$</p>
+            </div>
+          </div>
+        </div>
+        <div class="wine">
+          <div class="wine__left">
+            <img src="./static/img/sampleWine.jpg" alt="excelent wine" class="wine__image">
+            <button class="wine__add-to-cart"></button>
+          </div>
+          <div class="wine__right">
+            <div>
+              <h4 class="wine__name">WineName</h4>
+              <div class="wine__info">
+                <p class="wine__specs"><span class="wine__spec">year</span><span class="wine__value">1900</span></p>
+                <p class="wine__specs"><span class="wine__spec">year</span><span class="wine__value">1900</span></p>
+                <p class="wine__specs"><span class="wine__spec">year</span><span class="wine__value">1900</span></p>
+              </div>
+            </div>
+            <div class="wine__price">
+              <p>100$</p>
+            </div>
+          </div>
+        </div>
+        <div class="wine">
+          <div class="wine__left">
+            <img src="./static/img/sampleWine.jpg" alt="excelent wine" class="wine__image">
+            <button class="wine__add-to-cart"></button>
+          </div>
+          <div class="wine__right">
+            <div>
+              <h4 class="wine__name">WineName</h4>
+              <div class="wine__info">
+                <p class="wine__specs"><span class="wine__spec">year</span><span class="wine__value">1900</span></p>
+                <p class="wine__specs"><span class="wine__spec">year</span><span class="wine__value">1900</span></p>
+                <p class="wine__specs"><span class="wine__spec">year</span><span class="wine__value">1900</span></p>
+              </div>
+            </div>
+            <div class="wine__price">
+              <p>100$</p>
+            </div>
+          </div>
+        </div>
+        <div class="wine">
+          <div class="wine__left">
+            <img src="./static/img/sampleWine.jpg" alt="excelent wine" class="wine__image">
+            <button class="wine__add-to-cart"></button>
+          </div>
+          <div class="wine__right">
+            <div>
+              <h4 class="wine__name">WineName</h4>
+              <div class="wine__info">
+                <p class="wine__specs"><span class="wine__spec">year</span><span class="wine__value">1900</span></p>
+                <p class="wine__specs"><span class="wine__spec">year</span><span class="wine__value">1900</span></p>
+                <p class="wine__specs"><span class="wine__spec">year</span><span class="wine__value">1900</span></p>
+              </div>
+            </div>
+            <div class="wine__price">
+              <p>100$</p>
+            </div>
+          </div>
+        </div>
+        <div class="wine">
+          <div class="wine__left">
+            <img src="./static/img/sampleWine.jpg" alt="excelent wine" class="wine__image">
+            <button class="wine__add-to-cart"></button>
+          </div>
+          <div class="wine__right">
+            <div>
+              <h4 class="wine__name">WineName</h4>
+              <div class="wine__info">
+                <p class="wine__specs"><span class="wine__spec">year</span><span class="wine__value">1900</span></p>
+                <p class="wine__specs"><span class="wine__spec">year</span><span class="wine__value">1900</span></p>
+                <p class="wine__specs"><span class="wine__spec">year</span><span class="wine__value">1900</span></p>
+              </div>
+            </div>
+            <div class="wine__price">
+              <p>100$</p>
+            </div>
+          </div>
+        </div>
+        <div class="wine">
+          <div class="wine__left">
+            <img src="./static/img/sampleWine.jpg" alt="excelent wine" class="wine__image">
+            <button class="wine__add-to-cart"></button>
+          </div>
+          <div class="wine__right">
+            <div>
+              <h4 class="wine__name">WineName</h4>
+              <div class="wine__info">
+                <p class="wine__specs"><span class="wine__spec">year</span><span class="wine__value">1900</span></p>
+                <p class="wine__specs"><span class="wine__spec">year</span><span class="wine__value">1900</span></p>
+                <p class="wine__specs"><span class="wine__spec">year</span><span class="wine__value">1900</span></p>
+              </div>
+            </div>
+            <div class="wine__price">
+              <p>100$</p>
+            </div>
+          </div>
+        </div>
+        <div class="wine">
+          <div class="wine__left">
+            <img src="./static/img/sampleWine.jpg" alt="excelent wine" class="wine__image">
+            <button class="wine__add-to-cart"></button>
+          </div>
+          <div class="wine__right">
+            <div>
+              <h4 class="wine__name">WineName</h4>
+              <div class="wine__info">
+                <p class="wine__specs"><span class="wine__spec">year</span><span class="wine__value">1900</span></p>
+                <p class="wine__specs"><span class="wine__spec">year</span><span class="wine__value">1900</span></p>
+                <p class="wine__specs"><span class="wine__spec">year</span><span class="wine__value">1900</span></p>
+              </div>
+            </div>
+            <div class="wine__price">
+              <p>100$</p>
+            </div>
+          </div>
+        </div>
+        <div class="wine">
+          <div class="wine__left">
+            <img src="./static/img/sampleWine.jpg" alt="excelent wine" class="wine__image">
+            <button class="wine__add-to-cart"></button>
+          </div>
+          <div class="wine__right">
+            <div>
+              <h4 class="wine__name">WineName</h4>
+              <div class="wine__info">
+                <p class="wine__specs"><span class="wine__spec">year</span><span class="wine__value">1900</span></p>
+                <p class="wine__specs"><span class="wine__spec">year</span><span class="wine__value">1900</span></p>
+                <p class="wine__specs"><span class="wine__spec">year</span><span class="wine__value">1900</span></p>
+              </div>
+            </div>
+            <div class="wine__price">
+              <p>100$</p>
+            </div>
+          </div>
+        </div>
+        <div class="wine">
+          <div class="wine__left">
+            <img src="./static/img/sampleWine.jpg" alt="excelent wine" class="wine__image">
+            <button class="wine__add-to-cart"></button>
+          </div>
+          <div class="wine__right">
+            <div>
+              <h4 class="wine__name">WineName</h4>
+              <div class="wine__info">
+                <p class="wine__specs"><span class="wine__spec">year</span><span class="wine__value">1900</span></p>
+                <p class="wine__specs"><span class="wine__spec">year</span><span class="wine__value">1900</span></p>
+                <p class="wine__specs"><span class="wine__spec">year</span><span class="wine__value">1900</span></p>
+              </div>
+            </div>
+            <div class="wine__price">
+              <p>100$</p>
+            </div>
+          </div>
+        </div>
+        <div class="wine">
+          <div class="wine__left">
+            <img src="./static/img/sampleWine.jpg" alt="excelent wine" class="wine__image">
+            <button class="wine__add-to-cart"></button>
+          </div>
+          <div class="wine__right">
+            <div>
+              <h4 class="wine__name">WineName</h4>
+              <div class="wine__info">
+                <p class="wine__specs"><span class="wine__spec">year</span><span class="wine__value">1900</span></p>
+                <p class="wine__specs"><span class="wine__spec">year</span><span class="wine__value">1900</span></p>
+                <p class="wine__specs"><span class="wine__spec">year</span><span class="wine__value">1900</span></p>
+              </div>
+            </div>
+            <div class="wine__price">
+              <p>100$</p>
+            </div>
+          </div>
+        </div>
+        <div class="wine">
+          <div class="wine__left">
+            <img src="./static/img/sampleWine.jpg" alt="excelent wine" class="wine__image">
+            <button class="wine__add-to-cart"></button>
+          </div>
+          <div class="wine__right">
+            <div>
+              <h4 class="wine__name">WineName</h4>
+              <div class="wine__info">
+                <p class="wine__specs"><span class="wine__spec">year</span><span class="wine__value">1900</span></p>
+                <p class="wine__specs"><span class="wine__spec">year</span><span class="wine__value">1900</span></p>
+                <p class="wine__specs"><span class="wine__spec">year</span><span class="wine__value">1900</span></p>
+              </div>
+            </div>
+            <div class="wine__price">
+              <p>100$</p>
+            </div>
+          </div>
+        </div>
+        <div class="wine">
+          <div class="wine__left">
+            <img src="./static/img/sampleWine.jpg" alt="excelent wine" class="wine__image">
+            <button class="wine__add-to-cart"></button>
+          </div>
+          <div class="wine__right">
+            <div>
+              <h4 class="wine__name">WineName</h4>
+              <div class="wine__info">
+                <p class="wine__specs"><span class="wine__spec">year</span><span class="wine__value">1900</span></p>
+                <p class="wine__specs"><span class="wine__spec">year</span><span class="wine__value">1900</span></p>
+                <p class="wine__specs"><span class="wine__spec">year</span><span class="wine__value">1900</span></p>
+              </div>
+            </div>
+            <div class="wine__price">
+              <p>100$</p>
+            </div>
+          </div>
+        </div>
+        <div class="wine">
+          <div class="wine__left">
+            <img src="./static/img/sampleWine.jpg" alt="excelent wine" class="wine__image">
+            <button class="wine__add-to-cart"></button>
+          </div>
+          <div class="wine__right">
+            <div>
+              <h4 class="wine__name">WineName</h4>
+              <div class="wine__info">
+                <p class="wine__specs"><span class="wine__spec">year</span><span class="wine__value">1900</span></p>
+                <p class="wine__specs"><span class="wine__spec">year</span><span class="wine__value">1900</span></p>
+                <p class="wine__specs"><span class="wine__spec">year</span><span class="wine__value">1900</span></p>
+              </div>
+            </div>
+            <div class="wine__price">
+              <p>100$</p>
+            </div>
+          </div>
+        </div>
+        <div class="wine">
+          <div class="wine__left">
+            <img src="./static/img/sampleWine.jpg" alt="excelent wine" class="wine__image">
+            <button class="wine__add-to-cart"></button>
+          </div>
+          <div class="wine__right">
+            <div>
+              <h4 class="wine__name">WineName</h4>
+              <div class="wine__info">
+                <p class="wine__specs"><span class="wine__spec">year</span><span class="wine__value">1900</span></p>
+                <p class="wine__specs"><span class="wine__spec">year</span><span class="wine__value">1900</span></p>
+                <p class="wine__specs"><span class="wine__spec">year</span><span class="wine__value">1900</span></p>
+              </div>
+            </div>
+            <div class="wine__price">
+              <p>100$</p>
+            </div>
+          </div>
+        </div>
+        <div class="wine">
+          <div class="wine__left">
+            <img src="./static/img/sampleWine.jpg" alt="excelent wine" class="wine__image">
+            <button class="wine__add-to-cart"></button>
+          </div>
+          <div class="wine__right">
+            <div>
+              <h4 class="wine__name">WineName</h4>
+              <div class="wine__info">
+                <p class="wine__specs"><span class="wine__spec">year</span><span class="wine__value">1900</span></p>
+                <p class="wine__specs"><span class="wine__spec">year</span><span class="wine__value">1900</span></p>
+                <p class="wine__specs"><span class="wine__spec">year</span><span class="wine__value">1900</span></p>
+              </div>
+            </div>
+            <div class="wine__price">
+              <p>100$</p>
+            </div>
+          </div>
+        </div>
+        <div class="wine">
+          <div class="wine__left">
+            <img src="./static/img/sampleWine.jpg" alt="excelent wine" class="wine__image">
+            <button class="wine__add-to-cart"></button>
+          </div>
+          <div class="wine__right">
+            <div>
+              <h4 class="wine__name">WineName</h4>
+              <div class="wine__info">
+                <p class="wine__specs"><span class="wine__spec">year</span><span class="wine__value">1900</span></p>
+                <p class="wine__specs"><span class="wine__spec">year</span><span class="wine__value">1900</span></p>
+                <p class="wine__specs"><span class="wine__spec">year</span><span class="wine__value">1900</span></p>
+              </div>
+            </div>
+            <div class="wine__price">
+              <p>100$</p>
+            </div>
+          </div>
+        </div>
+        <div class="wine">
+          <div class="wine__left">
+            <img src="./static/img/sampleWine.jpg" alt="excelent wine" class="wine__image">
+            <button class="wine__add-to-cart"></button>
+          </div>
+          <div class="wine__right">
+            <div>
+              <h4 class="wine__name">WineName</h4>
+              <div class="wine__info">
+                <p class="wine__specs"><span class="wine__spec">year</span><span class="wine__value">1900</span></p>
+                <p class="wine__specs"><span class="wine__spec">year</span><span class="wine__value">1900</span></p>
+                <p class="wine__specs"><span class="wine__spec">year</span><span class="wine__value">1900</span></p>
+              </div>
+            </div>
+            <div class="wine__price">
+              <p>100$</p>
+            </div>
+          </div>
+        </div>
+        <div class="wine">
+          <div class="wine__left">
+            <img src="./static/img/sampleWine.jpg" alt="excelent wine" class="wine__image">
+            <button class="wine__add-to-cart"></button>
+          </div>
+          <div class="wine__right">
+            <div>
+              <h4 class="wine__name">WineName</h4>
+              <div class="wine__info">
+                <p class="wine__specs"><span class="wine__spec">year</span><span class="wine__value">1900</span></p>
+                <p class="wine__specs"><span class="wine__spec">year</span><span class="wine__value">1900</span></p>
+                <p class="wine__specs"><span class="wine__spec">year</span><span class="wine__value">1900</span></p>
+              </div>
+            </div>
+            <div class="wine__price">
+              <p>100$</p>
+            </div>
+          </div>
+        </div>
+        <div class="wine">
+          <div class="wine__left">
+            <img src="./static/img/sampleWine.jpg" alt="excelent wine" class="wine__image">
+            <button class="wine__add-to-cart"></button>
+          </div>
+          <div class="wine__right">
+            <div>
+              <h4 class="wine__name">WineName</h4>
+              <div class="wine__info">
+                <p class="wine__specs"><span class="wine__spec">year</span><span class="wine__value">1900</span></p>
+                <p class="wine__specs"><span class="wine__spec">year</span><span class="wine__value">1900</span></p>
+                <p class="wine__specs"><span class="wine__spec">year</span><span class="wine__value">1900</span></p>
+              </div>
+            </div>
+            <div class="wine__price">
+              <p>100$</p>
+            </div>
+          </div>
+        </div>
+        <div class="wine">
+          <div class="wine__left">
+            <img src="./static/img/sampleWine.jpg" alt="excelent wine" class="wine__image">
+            <button class="wine__add-to-cart"></button>
+          </div>
+          <div class="wine__right">
+            <div>
+              <h4 class="wine__name">WineName</h4>
+              <div class="wine__info">
+                <p class="wine__specs"><span class="wine__spec">year</span><span class="wine__value">1900</span></p>
+                <p class="wine__specs"><span class="wine__spec">year</span><span class="wine__value">1900</span></p>
+                <p class="wine__specs"><span class="wine__spec">year</span><span class="wine__value">1900</span></p>
+              </div>
+            </div>
+            <div class="wine__price">
+              <p>100$</p>
+            </div>
+          </div>
+        </div>
+        <div class="wine">
+          <div class="wine__left">
+            <img src="./static/img/sampleWine.jpg" alt="excelent wine" class="wine__image">
+            <button class="wine__add-to-cart"></button>
+          </div>
+          <div class="wine__right">
+            <div>
+              <h4 class="wine__name">WineName</h4>
+              <div class="wine__info">
+                <p class="wine__specs"><span class="wine__spec">year</span><span class="wine__value">1900</span></p>
+                <p class="wine__specs"><span class="wine__spec">year</span><span class="wine__value">1900</span></p>
+                <p class="wine__specs"><span class="wine__spec">year</span><span class="wine__value">1900</span></p>
+              </div>
+            </div>
+            <div class="wine__price">
+              <p>100$</p>
+            </div>
+          </div>
+        </div>
+        <div class="wine">
+          <div class="wine__left">
+            <img src="./static/img/sampleWine.jpg" alt="excelent wine" class="wine__image">
+            <button class="wine__add-to-cart"></button>
+          </div>
+          <div class="wine__right">
+            <div>
+              <h4 class="wine__name">WineName</h4>
+              <div class="wine__info">
+                <p class="wine__specs"><span class="wine__spec">year</span><span class="wine__value">1900</span></p>
+                <p class="wine__specs"><span class="wine__spec">year</span><span class="wine__value">1900</span></p>
+                <p class="wine__specs"><span class="wine__spec">year</span><span class="wine__value">1900</span></p>
+              </div>
+            </div>
+            <div class="wine__price">
+              <p>100$</p>
+            </div>
+          </div>
+        </div>
+        <div class="wine">
+          <div class="wine__left">
+            <img src="./static/img/sampleWine.jpg" alt="excelent wine" class="wine__image">
+            <button class="wine__add-to-cart"></button>
+          </div>
+          <div class="wine__right">
+            <div>
+              <h4 class="wine__name">WineName</h4>
+              <div class="wine__info">
+                <p class="wine__specs"><span class="wine__spec">year</span><span class="wine__value">1900</span></p>
+                <p class="wine__specs"><span class="wine__spec">year</span><span class="wine__value">1900</span></p>
+                <p class="wine__specs"><span class="wine__spec">year</span><span class="wine__value">1900</span></p>
+              </div>
+            </div>
+            <div class="wine__price">
+              <p>100$</p>
+            </div>
+          </div>
+        </div>
+        <div class="wine">
+          <div class="wine__left">
+            <img src="./static/img/sampleWine.jpg" alt="excelent wine" class="wine__image">
+            <button class="wine__add-to-cart"></button>
+          </div>
+          <div class="wine__right">
+            <div>
+              <h4 class="wine__name">WineName</h4>
+              <div class="wine__info">
+                <p class="wine__specs"><span class="wine__spec">year</span><span class="wine__value">1900</span></p>
+                <p class="wine__specs"><span class="wine__spec">year</span><span class="wine__value">1900</span></p>
+                <p class="wine__specs"><span class="wine__spec">year</span><span class="wine__value">1900</span></p>
+              </div>
+            </div>
+            <div class="wine__price">
+              <p>100$</p>
+            </div>
+          </div>
+        </div>
+        <div class="wine">
+          <div class="wine__left">
+            <img src="./static/img/sampleWine.jpg" alt="excelent wine" class="wine__image">
+            <button class="wine__add-to-cart"></button>
+          </div>
+          <div class="wine__right">
+            <div>
+              <h4 class="wine__name">WineName</h4>
+              <div class="wine__info">
+                <p class="wine__specs"><span class="wine__spec">year</span><span class="wine__value">1900</span></p>
+                <p class="wine__specs"><span class="wine__spec">year</span><span class="wine__value">1900</span></p>
+                <p class="wine__specs"><span class="wine__spec">year</span><span class="wine__value">1900</span></p>
+              </div>
+            </div>
+            <div class="wine__price">
+              <p>100$</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
 </body>
 </html>
