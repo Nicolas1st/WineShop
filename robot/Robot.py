@@ -36,8 +36,12 @@ class Robot:
     self.direciton = self.positions[-1][2]
 
 
-  def use_tool():
-    pass
+  def turn_on_tool(self):
+    self.tool.lock()
+  
+
+  def turn_off_tool(self):
+    self.tool.unlock()
 
 
   def determine_object_location(self, target):
@@ -59,26 +63,25 @@ class Robot:
         distance = height / self.AI.target_heights[target]
         cv2.imshow(target, frame)
         return distance, self.direction
-
   
+
   def deliver_object(self):
     bottle_distance, bottle_direction = self.determine_object_location("Bottle")
+    input() # to set a pause
     human_distance, human_direction = self.determine_object_location("Person")
 
+    self.turn_off_tool() # make sure it's switched off
     self.rotate(direction=bottle_direction)
     self.move(bottle_distance)
-    self.use_tool()
+    self.turn_on_tool()
     
     self.move_back()
 
     self.rotate(direction=human_direction)
     self.move()
-    self.use_tool()
-
-
-
+    self.turn_off_tool()
 
 
 if __name__ == "__main__":
   robot = Robot(0, 0, 0)
-  robot.determine_object_location("Person")
+  robot.deliver_object()

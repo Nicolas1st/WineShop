@@ -14,8 +14,17 @@ class AI:
     self.target_heights = {"Person": 250, "Bottle": 25}
     self.confidence_level = 0.5
 
+  def take_frame(self):
+    # taking one frame of the video stream
+    camera = cv2.VideoCapture(0)
+    ret, frame = camera.read()
+    if frame is None:
+      raise TypeError("No input was detected from the camera, frame = None")
+    camera.release()
+    return frame
 
-  def detect_object(self, target):
+
+  def detect_object(self, frame, target):
 
     """
     input
@@ -24,14 +33,6 @@ class AI:
       True if found else False
       widtn and height of the bounding box
     """
-
-    # taking one frame of the video stream
-    camera = cv2.VideoCapture(0)
-    ret, frame = camera.read()
-    camera.release()
-
-    if frame is None:
-      raise TypeError("No input was detected from the camera, frame = None")
 
     frame_height, frame_width, _ = frame.shape
 
@@ -71,7 +72,7 @@ class AI:
 
     # looking around
     for d_angle in range(360):
-
+      frame = self.take_frame()
       self.robot.direction += d_angle
       self.robot.direction %= 360
       found, width, height = self.detect_object(target)
