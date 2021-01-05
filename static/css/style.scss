@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+
+$dart-text-color: #2F2E41;
+
+:root {
+    font-family: "Roboto", sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.nav-bar {
+    height: 70px;
+    padding: 0 13vw;
+    background-color: #6C63FF;
+    display: flex;
+    align-items: center;
+
+    &__container {
+        list-style-type: none;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex: 1;
+        position: relative;
+    }
+
+    &__part {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 4.17vw;
+
+        @media screen and (max-width: 1100px) {
+            gap: 9vw;
+        }
+
+        &_links {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+
+            @media screen and (max-width: 1100px) {
+                display: none;
+            }
+        }
+    }
+
+    &__link {
+        color: white;
+        font-size: 22px;
+        text-transform: capitalize;
+        text-decoration: none;
+        white-space: nowrap;
+
+        &_sing-in {
+            display: block;
+
+            @media screen and (max-width: 1100px) {
+                display: none;
+            }
+        }
+    }
+
+    .logo {
+        font-size: 40px;
+        font-weight: 700;
+        letter-spacing: 0.1em;
+    }
+
+    &__sandwich {
+        display: none;
+        @media screen and (max-width: 1100px) {
+            display: block;
+        }
+    }
+}
+
+
+.sandwich {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 7px;
+    border: 2px solid white;
+    // position: relative;
+
+    &__layer {
+        width: 27px;
+        height: 6px;
+        background-color: white;
+        border-radius: 3px;
+    }
+
+    // &__panel {
+    //     display: none;
+        
+    // }
+
+    &__links {
+        position: absolute;
+        top: 65px;
+        right: -5px;
+        width: 74vw;
+        background-color: rgba(0, 0, 0, 0.2);
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+        border-radius: 10px;
+        padding: 25px;
+        width: 74vw;
+        transition: width 1s linear, height 1s linear, opacity 1s linear, padding 1s linear;
+    }
+
+    &__link {
+        color: white;
+        font-size: 22px;
+        text-transform: capitalize;
+        text-decoration: none;
+        white-space: nowrap;
+    }
+}
