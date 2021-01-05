@@ -1,0 +1,330 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+$dart-text-color: #2F2E41;
+
+:root {
+  font-family: "Roboto", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+
+.navbar {
+  position: relative;
+  height: 70px;
+  background-color: #6C63FF;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style-type: none;
+  padding: 0 13vw;
+
+  &__part {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 4.16vw;
+    &_centered {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  &__link {
+    color: white;
+    text-decoration: none;
+    text-transform: capitalize;
+    font-size: 22px;
+  }
+
+  .logo {
+    font-weight: 700;
+    font-size: 40px;
+    letter-spacing: .1em;
+  }
+
+}
+
+
+.header {
+  margin: 0 13vw;
+  padding: 44px 0;
+  height: 387.84px;
+  display: flex;
+  align-items: center;
+  border-bottom: 2px solid $dart-text-color;
+  position: relative;
+
+  &__text {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &__heading {
+    color: $dart-text-color;
+    font-size: 90px;
+    font-weight: 700;
+    line-height: 0.875em;
+    &::first-letter {
+      text-transform: capitalize;
+    }
+  }
+
+  &__subheading {
+    color: #777;
+    font-size: 55px;
+    font-weight: 400;
+  }
+
+  &__button {
+    color: $dart-text-color;
+    font-size: 40px;
+    padding: 30px 97px 30px 30px;
+    border: none;
+    outline: none;
+    background-color: #78EF92;
+    background-image: url('../img/wineBottle.svg');
+    background-repeat: no-repeat;
+    background-position: 200px 20.44px;
+    border-radius: 15px;
+    text-transform: capitalize;
+    align-self: flex-start;
+  }
+
+  &__image {
+    position: absolute;
+    right: 0;
+    bottom: 44px;
+  }
+}
+
+
+.shop {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 13vw;
+  gap: 40px;
+}
+
+
+.search {
+  margin-top: 130px;
+  width: 130px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  align-items: center;
+
+  &__heading {
+    font-size: 30px;
+    color: $dart-text-color;
+    text-transform: capitalize;
+    letter-spacing: .03em;
+  }
+
+  &__field, &__submit {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    background-color: #8A83FF;
+  }
+
+  &__submit {
+    background-color: #78EF92;
+  }
+}
+
+
+.wines {
+  flex-grow: 1;
+
+  &__heading-container {
+    height: 130px;
+    display: flex;
+    align-items: center;
+  }
+
+  &__heading {
+    color: $dart-text-color;
+    font-size: 60px;
+    letter-spacing: .03em;
+    text-transform: capitalize;
+    font-weight: 400;
+  }
+}
+
+.wines__found {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  row-gap: 32px;
+  column-gap: 32px;
+}
+
+.wine {
+  width: 400px;
+  height: 290px;
+  background-color: #E8E7FF;
+  border-radius: 20px;
+  padding: 30px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+
+  &__left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+  }
+  &__image {
+    width: 155px;
+    height: 155px;
+    border-radius: 10px;
+  }
+
+  &__add-to-cart {
+    height: 50px;
+    widtH: 155px;
+    border-radius: 15px;
+    background-color: #78EF92;
+    border: none;
+    outline: none;
+    background-image: url('../img/addToCartButtonBackground.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  &__right {
+    margin-top: -7px;
+    height: 237px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__name {
+    color: $dart-text-color;
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 17px;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 14px;
+    align-items: center;
+  }
+
+  &__specs {
+    width: 118px;
+    border-bottom: 1px solid $dart-text-color;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+
+  &__spec {
+    font-size: 14px;
+    color: $dart-text-color;
+  }
+
+  &__value {
+    font-size: 16px;
+    color: $dart-text-color;
+  }
+
+  &__price {
+    height: 50px;
+    font-size: 25px;
+    color: $dart-text-color;
+    display: flex;
+    align-items: center;
+  }
+
+}
+
+.cart {
+  position: relative;
+
+  &__container {
+    padding-top: 30px;
+    position: absolute;
+    transform: translateX(-136px);
+    display: none;
+    z-index: 1;
+  }
+
+  &__items {
+    width: 320px;
+    height: 400px;
+    padding: 30px;
+    border-radius: 15px;
+    background-color: rgba(80, 80, 80, .7);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 30px;
+  }
+
+  .items__container {
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 15px;
+  }
+
+  .item {
+    border-bottom: 1px solid white;
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    align-items: center;
+    padding: 5px 0;
+    
+    &__image {
+      width: 50px;
+      height: 50px;
+    }
+
+    &__name {
+      font-size: 20px;
+      color: white;
+      flex-grow: 1;
+      text-align: center;
+    }
+
+    &__price {
+      font-size: 18px;
+      color: white;
+    }
+
+  }
+
+  &:hover &__container {
+    display: block;
+  }
+
+  &__order {
+    width: 260px;
+    background-color: #78EF92;
+    text-transform: capitalize;
+    font-size: 22px;
+    padding: 15px;
+    border: none;
+    outline: none;
+    border-radius: 15px;
+  }
+}
+
