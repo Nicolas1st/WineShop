@@ -72,6 +72,15 @@ $dart-text-color: #2F2E41;
         font-size: 40px;
         font-weight: 700;
         letter-spacing: 0.1em;
+
+        @media screen and (max-width: 600px) {
+            font-size: 25px;
+        }
+    }
+
+    &__cart-manager {
+        display: flex;
+        align-items: center;
     }
 
     &__sandwich {
@@ -80,6 +89,7 @@ $dart-text-color: #2F2E41;
             display: block;
         }
     }
+    
 }
 
 
@@ -94,17 +104,22 @@ $dart-text-color: #2F2E41;
     border: 2px solid white;
     // position: relative;
 
+    @media screen and (max-width: 600px) {
+        width: 30px;
+        height: 30px;
+    }
+
     &__layer {
         width: 27px;
         height: 6px;
         background-color: white;
         border-radius: 3px;
-    }
 
-    // &__panel {
-    //     display: none;
-        
-    // }
+        @media screen and (max-width: 600px) {
+            height: 4.5px;
+            width: 20.25px;
+        }
+    }
 
     &__links {
         position: absolute;
@@ -128,5 +143,9 @@ $dart-text-color: #2F2E41;
         text-transform: capitalize;
         text-decoration: none;
         white-space: nowrap;
+        display: block;
+        width: 80%;
+        text-align: center;
+        border-bottom: 1px solid white;
     }
 }

@@ -96,6 +96,21 @@
   letter-spacing: 0.1em;
 }
 
+@media screen and (max-width: 600px) {
+  .nav-bar .logo {
+    font-size: 25px;
+  }
+}
+
+.nav-bar__cart-manager {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 .nav-bar__sandwich {
   display: none;
 }
@@ -126,11 +141,25 @@
   border: 2px solid white;
 }
 
+@media screen and (max-width: 600px) {
+  .sandwich {
+    width: 30px;
+    height: 30px;
+  }
+}
+
 .sandwich__layer {
   width: 27px;
   height: 6px;
   background-color: white;
   border-radius: 3px;
+}
+
+@media screen and (max-width: 600px) {
+  .sandwich__layer {
+    height: 4.5px;
+    width: 20.25px;
+  }
 }
 
 .sandwich__links {
@@ -161,5 +190,9 @@
   text-transform: capitalize;
   text-decoration: none;
   white-space: nowrap;
+  display: block;
+  width: 80%;
+  text-align: center;
+  border-bottom: 1px solid white;
 }
 /*# sourceMappingURL=style.css.map */

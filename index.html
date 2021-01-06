@@ -19,7 +19,13 @@
             </li> 
 
             <li class="nav-bar__part">
-                <img src="./static/img/basket.svg" alt="" class="nav-bar__basket">
+                <picture class="nav-bar__cart-manager">
+                    <source srcset="./static/img/small_basket.svg"
+                            media="(max-width: 600px)">
+                    <source srcset="./static/img/basket.svg"
+                            media="(min-width: 600px)">
+                    <img src="./static/img/basket.svg" alt="basket_with_chosen_goods" class="nav-bar__basket">
+                </picture>
                 <div class="nav-bar__sandwich">
                     <div class="sandwich">
                         <div class="sandwich__layer"></div>
