@@ -1,7 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import 'testfolder/animations';
 
 
-$dart-text-color: #2F2E41;
+$dark-text-color: #2F2E41;
 
 :root {
     font-family: "Roboto", sans-serif;
@@ -102,7 +103,7 @@ $dart-text-color: #2F2E41;
     align-items: center;
     border-radius: 7px;
     border: 2px solid white;
-    // position: relative;
+    position: relative;
 
     @media screen and (max-width: 600px) {
         width: 30px;
@@ -134,7 +135,6 @@ $dart-text-color: #2F2E41;
         border-radius: 10px;
         padding: 25px;
         width: 74vw;
-        transition: width 1s linear, height 1s linear, opacity 1s linear, padding 1s linear;
     }
 
     &__link {
@@ -146,6 +146,71 @@ $dart-text-color: #2F2E41;
         display: block;
         width: 80%;
         text-align: center;
+        padding-bottom: 10px;
         border-bottom: 1px solid white;
     }
 }
+
+
+
+.header {
+    padding: 4vh 0;
+    width: 74vw;
+    margin: auto;
+    position: relative;
+
+    &__title {
+        font-weight: 700;
+        font-size: 4.6875vw;
+        color: $dark-text-color;
+        line-height: 0.875em;
+        &::first-letter {
+          text-transform: capitalize;
+        }
+        padding-bottom: 5.416666666666667vw;
+    }
+
+    &__subtitle {
+        line-height: 5.416666666666667vw;
+        font-weight: 400;
+        font-size: 2.8645833333333332vw;
+        color: #777;
+    }
+
+    &__button {
+        color: $dark-text-color;
+        font-size: 2.0833333333333332vw;
+        padding: 1.5625vw 5.0520833333333334vw 1.5625vw 1.5625vw;
+        border: none;
+        outline: none;
+        background-color: #78EF92;
+        background-image: url('../img/wineBottle.svg');
+        background-repeat: no-repeat;
+        background-position: 10.416666666666667vw 0.9895833333333333vw;        ;
+        background-size: 1.71875vw 3.59375vw;
+        border-radius: 0.78125vw;
+        text-transform: capitalize;
+        align-self: flex-start;
+    }
+
+    &__image {
+      height: 0;
+      width: 50.9375vw;
+      position: absolute;
+      top: 4vh;
+      right: 0;
+    }
+
+    &__svg-container {
+        padding-top: 20.26vw;
+        position: relative;
+    }
+
+    &__svg {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+}
+

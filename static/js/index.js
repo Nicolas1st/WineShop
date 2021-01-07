@@ -1,4 +1,3 @@
-const panel = document.querySelector(".sandwich__panel");
 const sandwich = document.querySelector(".sandwich");
 const sandwichLinks = document.querySelector(".sandwich__links");
 
