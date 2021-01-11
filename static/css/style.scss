@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import 'animations';
 
 
 $dark-text-color: #2F2E41;
@@ -161,6 +162,11 @@ $mobile-screen-modifier: 1;
     margin: auto;
     position: relative;
 
+    &__info {
+      position: relative;
+      animation: fadein 1.5s linear forwards, animationdrop 2s ease-in-out forwards;
+    }
+
     &__title {
         font-weight: 700;
         font-size: 4.6875vw;
@@ -193,6 +199,13 @@ $mobile-screen-modifier: 1;
         border-radius: 0.78125vw;
         text-transform: capitalize;
         align-self: flex-start;
+        transition: 0.5s cubic-bezier(.53,.54,.58,.59);
+        cursor: pointer;
+
+        &:hover {
+          transform: scale(0.95);
+          transition: 0.5s cubic-bezier(.53,.54,.58,.59);
+        }
     }
 
     &__image {
@@ -206,6 +219,7 @@ $mobile-screen-modifier: 1;
     &__svg-container {
         padding-top: 20.26vw;
         position: relative;
+        animation: fadein 1s linear forwards, animationdrop 1.5s ease-in-out forwards;
     }
 
     &__svg {
@@ -319,8 +333,14 @@ $mobile-screen-modifier: 1;
       background-repeat: no-repeat;
       // background-attachment: fixed;
       background-size: 32%;
+      transition: 0.5s cubic-bezier(.53,.54,.58,.59);
       // animation: animatedBackground 1s ease-in-out 1s infinite forwards alternate-reverse;
-      // cursor: ;
+      cursor: pointer;
+
+      &:hover {
+        transform: scale(0.95);
+        transition: 0.5s cubic-bezier(.53,.54,.58,.59);
+      }
     }
   
     &__right {
@@ -344,6 +364,7 @@ $mobile-screen-modifier: 1;
       justify-content: space-between;
       gap: 2.2865vw;
       align-items: center;
+      position: relative;
     }
   
     &__specs {
@@ -562,4 +583,8 @@ $mobile-screen-modifier: 1;
     outline: none;
     border-radius: 15px;
   }
+}
+
+#shop {
+  scroll-behavior: smooth;
 }

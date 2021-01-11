@@ -1,4 +1,39 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+@-webkit-keyframes fadein {
+  from {
+    opacity: 0.3;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadein {
+  from {
+    opacity: 0.3;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes animationdrop {
+  from {
+    bottom: 1.8vw;
+  }
+  to {
+    bottom: 0;
+  }
+}
+
+@keyframes animationdrop {
+  from {
+    bottom: 1.8vw;
+  }
+  to {
+    bottom: 0;
+  }
+}
+
 :root {
   font-family: "Roboto", sans-serif;
 }
@@ -204,6 +239,12 @@
   position: relative;
 }
 
+.header__info {
+  position: relative;
+  -webkit-animation: fadein 1.5s linear forwards, animationdrop 2s ease-in-out forwards;
+          animation: fadein 1.5s linear forwards, animationdrop 2s ease-in-out forwards;
+}
+
 .header__title {
   font-weight: 700;
   font-size: 4.6875vw;
@@ -238,6 +279,16 @@
   text-transform: capitalize;
   -ms-flex-item-align: start;
       align-self: flex-start;
+  -webkit-transition: 0.5s cubic-bezier(0.53, 0.54, 0.58, 0.59);
+  transition: 0.5s cubic-bezier(0.53, 0.54, 0.58, 0.59);
+  cursor: pointer;
+}
+
+.header__button:hover {
+  -webkit-transform: scale(0.95);
+          transform: scale(0.95);
+  -webkit-transition: 0.5s cubic-bezier(0.53, 0.54, 0.58, 0.59);
+  transition: 0.5s cubic-bezier(0.53, 0.54, 0.58, 0.59);
 }
 
 .header__image {
@@ -251,6 +302,8 @@
 .header__svg-container {
   padding-top: 20.26vw;
   position: relative;
+  -webkit-animation: fadein 1s linear forwards, animationdrop 1.5s ease-in-out forwards;
+          animation: fadein 1s linear forwards, animationdrop 1.5s ease-in-out forwards;
 }
 
 .header__svg {
@@ -390,6 +443,16 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: 32%;
+  -webkit-transition: 0.5s cubic-bezier(0.53, 0.54, 0.58, 0.59);
+  transition: 0.5s cubic-bezier(0.53, 0.54, 0.58, 0.59);
+  cursor: pointer;
+}
+
+.wine__add-to-cart:hover {
+  -webkit-transform: scale(0.95);
+          transform: scale(0.95);
+  -webkit-transition: 0.5s cubic-bezier(0.53, 0.54, 0.58, 0.59);
+  transition: 0.5s cubic-bezier(0.53, 0.54, 0.58, 0.59);
 }
 
 .wine__right {
@@ -432,6 +495,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  position: relative;
 }
 
 .wine__specs {
@@ -668,5 +732,9 @@
   border: none;
   outline: none;
   border-radius: 15px;
+}
+
+#shop {
+  scroll-behavior: smooth;
 }
 /*# sourceMappingURL=style.css.map */
