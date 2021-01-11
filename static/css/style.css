@@ -344,11 +344,11 @@
 }
 
 .wine {
-  width: 20.8vw;
-  height: 15.1vw;
+  width: 65.15vw;
+  height: 47.3vw;
   background-color: #F5F4FF;
   border-radius: 20px;
-  padding: 1.5625vw;
+  padding: 4.89vw;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   display: -webkit-box;
@@ -360,7 +360,7 @@
 }
 
 .wine__left {
-  height: 12.34375vw;
+  height: 38.66vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -374,14 +374,14 @@
 }
 
 .wine__image {
-  width: 8.07vw;
-  height: 8.07vw;
+  width: 25.277vw;
+  height: 25.277vw;
   border-radius: 10px;
 }
 
 .wine__add-to-cart {
-  height: 2.6vw;
-  width: 8.07vw;
+  height: 8.14vw;
+  width: 25.277vw;
   border-radius: 15px;
   background-color: #78EF92;
   border: none;
@@ -393,8 +393,8 @@
 }
 
 .wine__right {
-  margin-top: -.365vw;
-  height: 12.34375vw;
+  margin-top: -1.143vw;
+  height: 38.66vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -412,9 +412,9 @@
 
 .wine__name {
   color: #2F2E41;
-  font-size: 1.5625vw;
+  font-size: 4.894vw;
   font-weight: 700;
-  margin-bottom: 0.89vw;
+  margin-bottom: 2.787vw;
 }
 
 .wine__info {
@@ -428,14 +428,14 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  gap: 0.73vw;
+  gap: 2.2865vw;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
 
 .wine__specs {
-  width: 6.15vw;
+  width: 19.263vw;
   border-bottom: 1px solid #2F2E41;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -449,18 +449,18 @@
 }
 
 .wine__spec {
-  font-size: 0.73vw;
+  font-size: 2.2865vw;
   color: #2F2E41;
 }
 
 .wine__value {
-  font-size: 0.83vw;
+  font-size: 2.6vw;
   color: #2F2E41;
 }
 
 .wine__price {
-  height: 2.6vw;
-  font-size: 1.3vw;
+  height: 8.14vw;
+  font-size: 4.071vw;
   color: #2F2E41;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -468,6 +468,92 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+@media screen and (min-width: 700px) {
+  .wine {
+    width: 31.616vw;
+    height: 22.952vw;
+    padding: 2.375vw;
+  }
+  .wine__left {
+    height: 18.762vw;
+  }
+  .wine__image {
+    width: 12.266vw;
+    height: 12.266vw;
+  }
+  .wine__add-to-cart {
+    height: 3.952vw;
+    width: 12.266vw;
+  }
+  .wine__right {
+    margin-top: -0.555vw;
+    height: 18.762vw;
+  }
+  .wine__name {
+    font-size: 2.375vw;
+    margin-bottom: 1.97653vw;
+  }
+  .wine__info {
+    gap: 1.11vw;
+  }
+  .wine__specs {
+    width: 9.348vw;
+  }
+  .wine__spec {
+    font-size: 1.11vw;
+  }
+  .wine__value {
+    font-size: 1.262vw;
+  }
+  .wine__price {
+    height: 3.952vw;
+    font-size: 1.976vw;
+  }
+}
+
+@media screen and (min-width: 1100px) {
+  .wine {
+    width: 20.8vw;
+    height: 15.1vw;
+    padding: 1.5625vw;
+  }
+  .wine__left {
+    height: 12.34375vw;
+  }
+  .wine__image {
+    width: 8.07vw;
+    height: 8.07vw;
+  }
+  .wine__add-to-cart {
+    height: 2.6vw;
+    width: 8.07vw;
+  }
+  .wine__right {
+    margin-top: -.365vw;
+    height: 12.34375vw;
+  }
+  .wine__name {
+    font-size: 1.5625vw;
+    margin-bottom: 0.89vw;
+  }
+  .wine__info {
+    gap: 0.73vw;
+  }
+  .wine__specs {
+    width: 6.15vw;
+  }
+  .wine__spec {
+    font-size: 0.73vw;
+  }
+  .wine__value {
+    font-size: 0.83vw;
+  }
+  .wine__price {
+    height: 2.6vw;
+    font-size: 1.3vw;
+  }
 }
 
 .footer {

@@ -1,0 +1,48 @@
+width: 31.616vw;
+    height: 22.952vw;
+    padding: 2.375vw;
+  
+    &__left {
+      height: 18.762vw; 
+    }
+
+    &__image {
+      width: 12.266vw;
+      height: 12.266vw;
+    }
+  
+    &__add-to-cart {
+      height: 3.952vw;
+      width: 12.266vw;   
+    }
+  
+    &__right {
+      margin-top: -0.555vw;
+      height: 18.762vw;
+    }
+
+    &__name {
+      font-size: 2.375vw;
+      margin-bottom: 1.97653vw;
+    }
+  
+    &__info {
+      gap: 1.11vw;
+    }
+  
+    &__specs {
+      width: 9.348vw;
+    }
+  
+    &__spec {
+      font-size: 1.11vw;
+    }
+  
+    &__value {
+      font-size: 1.262vw;
+    }
+    
+    &__price {
+      height: 3.952vw;
+      font-size: 1.976vw;
+    }
