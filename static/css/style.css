@@ -16,7 +16,7 @@
   }
 }
 
-@-webkit-keyframes animationdrop {
+@-webkit-keyframes drop {
   from {
     bottom: 1.8vw;
   }
@@ -25,9 +25,27 @@
   }
 }
 
-@keyframes animationdrop {
+@keyframes drop {
   from {
     bottom: 1.8vw;
+  }
+  to {
+    bottom: 0;
+  }
+}
+
+@-webkit-keyframes drop2 {
+  from {
+    bottom: 4vw;
+  }
+  to {
+    bottom: 0;
+  }
+}
+
+@keyframes drop2 {
+  from {
+    bottom: 4vw;
   }
   to {
     bottom: 0;
@@ -241,8 +259,8 @@
 
 .header__info {
   position: relative;
-  -webkit-animation: fadein 1.5s linear forwards, animationdrop 2s ease-in-out forwards;
-          animation: fadein 1.5s linear forwards, animationdrop 2s ease-in-out forwards;
+  -webkit-animation: fadein 0.5s linear forwards, drop 1s cubic-bezier(0.6, -0.28, 0.735, 0.045) forwards;
+          animation: fadein 0.5s linear forwards, drop 1s cubic-bezier(0.6, -0.28, 0.735, 0.045) forwards;
 }
 
 .header__title {
@@ -273,7 +291,7 @@
   background-color: #78EF92;
   background-image: url("../img/wineBottle.svg");
   background-repeat: no-repeat;
-  background-position: 10.416666666666667vw 0.9895833333333333vw;
+  background-position: 10.42vw 0.99vw;
   background-size: 1.71875vw 3.59375vw;
   border-radius: 0.78125vw;
   text-transform: capitalize;
@@ -302,8 +320,8 @@
 .header__svg-container {
   padding-top: 20.26vw;
   position: relative;
-  -webkit-animation: fadein 1s linear forwards, animationdrop 1.5s ease-in-out forwards;
-          animation: fadein 1s linear forwards, animationdrop 1.5s ease-in-out forwards;
+  -webkit-animation: fadein 0.5s linear forwards, drop 1s cubic-bezier(0.6, -0.28, 0.735, 0.045) forwards;
+          animation: fadein 0.5s linear forwards, drop 1s cubic-bezier(0.6, -0.28, 0.735, 0.045) forwards;
 }
 
 .header__svg {
@@ -322,6 +340,10 @@
   margin: 0 13vw;
   gap: 2.08vw;
   padding-bottom: 5vw;
+  position: relative;
+  opacity: 0;
+  -webkit-animation: drop2 1.5s cubic-bezier(0.6, -0.28, 0.735, 0.045) forwards, fadein 0.5s linear 1s forwards;
+          animation: drop2 1.5s cubic-bezier(0.6, -0.28, 0.735, 0.045) forwards, fadein 0.5s linear 1s forwards;
 }
 
 .search {
@@ -519,6 +541,7 @@
 
 .wine__value {
   font-size: 2.6vw;
+  text-transform: capitalize;
   color: #2F2E41;
 }
 

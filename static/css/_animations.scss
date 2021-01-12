@@ -8,9 +8,21 @@
     }
 }
 
-@keyframes animationdrop {
+@keyframes drop {
     from {
         bottom: 1.8vw;
+    }
+
+    to {
+        bottom: 0;
+    }
+}
+
+
+
+@keyframes drop2 {
+    from {
+        bottom: 4vw;
     }
 
     to {

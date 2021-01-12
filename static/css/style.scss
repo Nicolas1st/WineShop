@@ -164,7 +164,7 @@ $mobile-screen-modifier: 1;
 
     &__info {
       position: relative;
-      animation: fadein 1.5s linear forwards, animationdrop 2s ease-in-out forwards;
+      animation: fadein 0.5s linear forwards, drop 1s cubic-bezier(0.600, -0.280, 0.735, 0.045) forwards;
     }
 
     &__title {
@@ -194,7 +194,7 @@ $mobile-screen-modifier: 1;
         background-color: #78EF92;
         background-image: url('../img/wineBottle.svg');
         background-repeat: no-repeat;
-        background-position: 10.416666666666667vw 0.9895833333333333vw;        ;
+        background-position: 10.42vw 0.99vw;        ;
         background-size: 1.71875vw 3.59375vw;
         border-radius: 0.78125vw;
         text-transform: capitalize;
@@ -219,7 +219,7 @@ $mobile-screen-modifier: 1;
     &__svg-container {
         padding-top: 20.26vw;
         position: relative;
-        animation: fadein 1s linear forwards, animationdrop 1.5s ease-in-out forwards;
+        animation: fadein 0.5s linear forwards, drop 1s cubic-bezier(0.600, -0.280, 0.735, 0.045) forwards;
     }
 
     &__svg {
@@ -237,7 +237,10 @@ $mobile-screen-modifier: 1;
     margin: 0 13vw;
     gap: 2.08vw;
     padding-bottom: 5vw;
-  }
+    position: relative;
+    opacity: 0;
+    animation: drop2 1.5s cubic-bezier(0.600, -0.280, 0.735, 0.045) forwards, fadein 0.5s linear 1s forwards;
+}
   
   
   .search {
@@ -377,11 +380,13 @@ $mobile-screen-modifier: 1;
   
     &__spec {
       font-size: 2.2865vw;
+      // text-transform: capitalize;
       color: $dark-text-color;
     }
   
     &__value {
       font-size: 2.6vw;
+      text-transform: capitalize;
       color: $dark-text-color;
     }
     
