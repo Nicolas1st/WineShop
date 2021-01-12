@@ -23,6 +23,10 @@ $mobile-screen-modifier: 1;
     background-color: #6C63FF;
     display: flex;
     align-items: center;
+    margin-top: -70px;
+    position: fixed;
+    width: 100%;
+    z-index: 2;
 
     &__container {
         list-style-type: none;
@@ -157,9 +161,12 @@ $mobile-screen-modifier: 1;
 
 
 .header {
+    // padding-top: calc(4vh + 70px);
+    // padding-bottom: 4vh;
     padding: 4vh 0;
     width: 74vw;
     margin: auto;
+    margin-top: 70px;
     position: relative;
 
     &__info {
