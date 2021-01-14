@@ -10,7 +10,7 @@ class Robot:
     self.x = x
     self.y = y
     self.positions = [[x, y, direction]]
-    self.AI = AI()
+    self.AI = AI('yolov3.weights', 'yolov3.cfg', 0.7)
     self.tool = Manipulator()
     self.direction = direction
 
@@ -58,7 +58,7 @@ class Robot:
       self.direction += d_angle
       self.direction %= 360
       found, width, height, frame = self.AI.detect_object(target)
-
+      print('Found')
       if found:
         distance = height / self.AI.target_heights[target]
         cv2.imshow(target, frame)

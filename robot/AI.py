@@ -7,12 +7,13 @@ class AI:
   """AI tailored for detecting people and bottles on images
   based on the YOLO algorithm"""
 
-  def __init__(self):
-    self.NeuralNetwork = cv2.dnn.readNet('yolov3.weights', 'yolov3.cfg')
+  def __init__(self, weight_file_name, config_file_name, confidence):
+    self.NeuralNetwork = cv2.dnn.readNet(weight_file_name, config_file_name)
     self.output_layers = [self.NeuralNetwork.getLayerNames()[i[0] - 1] for i in self.NeuralNetwork.getUnconnectedOutLayers()]
     self.targets = {"Person": 0, "Bottle": 39}
     self.target_heights = {"Person": 250, "Bottle": 25}
-    self.confidence_level = 0.5
+    self.confidence_level = confidence
+
 
   def take_frame(self):
     # taking one frame of the video stream
@@ -24,15 +25,18 @@ class AI:
     return frame
 
 
-  def detect_object(self, frame, target):
+  def detect_object(self, target):
 
     """
     input
-      target: "human" or "bottle"
+      target: "Person" or "Bottle"
     return 
       True if found else False
       widtn and height of the bounding box
     """
+
+
+    frame = self.take_frame()
 
     frame_height, frame_width, _ = frame.shape
 
@@ -48,8 +52,6 @@ class AI:
         object_detected = np.argmax(scores)
         confidence = scores[object_detected]
 
-        print(object_detected)
-
         if confidence >= self.confidence_level and object_detected == self.targets[target]:
 
           # parameters of the bounding box
@@ -57,6 +59,7 @@ class AI:
           center_y = int(output_params[1] * frame_height)
           width = int(output_params[2] * frame_width)
           height = int(output_params[3] * frame_height)
+
 
           upper_left = (center_x - width // 2, center_y - height // 2)
           lower_right = (center_x + width // 2, center_y + height // 2)
@@ -67,21 +70,13 @@ class AI:
           return True, height, width, frame
 
     return False, None, None, None
-  
-  def determine_object_location(self, target):
-
-    # looking around
-    for d_angle in range(360):
-      frame = self.take_frame()
-      self.robot.direction += d_angle
-      self.robot.direction %= 360
-      found, width, height = self.detect_object(target)
-
-      if found:
-        distance = height / self.target_heights[target]
-        return distance, self.robot.direction
 
 
 if __name__ == "__main__":
-  ai = AI() # the determine_object_location method won't work here because the robot class is not imported
+  ai = AI('yolov3.weights', 'yolov3.cfg', 0.5) # the determine_object_location method won't work here because the robot class is not imported
+
+  ai.detect_object('Person')
+  ai.detect_object("Bottle")
+
+
   print(ai.detect_object("Person"))
