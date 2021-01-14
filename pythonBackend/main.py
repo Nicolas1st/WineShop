@@ -83,7 +83,7 @@ def register():
             user = users(login, email, address)
             db.session.add(user)
             db.session.commit()
-            return redirect(url_for('profile', context=user.__dict__))
+            return render_template("profile.html", user_login=user.__dict__)
     return render_template("registering.html")
 
 
