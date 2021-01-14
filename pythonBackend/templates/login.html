@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="login">
+    <h2 class="login__title">Login</h2>
+    <form action="#" method="post" class="login__form">
+        <div class="login__field">
+            <label for="login" class="login__label">Login or Email</label>
+            <input type="text" name="login" id="login" class="login__input" required>
+           
+        </div>
+        <div class="login__field">
+            <label for="password" class="login__label">Password</label>
+            <input type="password" name="password" id="password" class="login__input" required>
+           
+        </div>
+        <a href="/register" class="login__new-account">Create an account</a>
+        <input type="submit" value="sign in" class="login__submit">
+    </form>
+</section>
+{% endblock %}

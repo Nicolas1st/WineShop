@@ -1,0 +1,31 @@
+@keyframes fadein {
+    from {
+        opacity: 0.3;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes drop {
+    from {
+        bottom: 1.8vw;
+    }
+
+    to {
+        bottom: 0;
+    }
+}
+
+
+
+@keyframes drop2 {
+    from {
+        bottom: 4vw;
+    }
+
+    to {
+        bottom: 0;
+    }
+}

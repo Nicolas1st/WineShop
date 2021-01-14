@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% block content %}
+<section>
+    <div>
+        <div>
+            <img src="" alt="">
+        </div>
+        <div>
+            <p><span>Login:</span><span>{{user["login"]}}</span></p>
+            <p><span>Delivery address:</span><span>{{user["address"]}}</span></p>
+        </div>
+    </div>
+    <div>
+        <div>
+            <h2>Actions</h2>
+            <div>
+                <a href="#">Change adress</a>
+                <a href="#">Change email</a>
+                <a href="#">Change password</a>
+                <a href="#">Remove account</a>
+            </div>
+        </div>
+        <div>
+            <h2>My orders</h2>
+            <div>
+                <div class="order"></div>
+                <div class="order"></div>
+                <div class="order"></div>
+                <div class="order"></div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock%}
