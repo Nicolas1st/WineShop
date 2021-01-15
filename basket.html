@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Le Vin</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css')}}">
+    <link rel="stylesheet" href="./static/css/style.css">
 </head>
 <body class="website">
-  <nav class="nav-bar">
+   <nav class="nav-bar">
       <ul class="nav-bar__container">
           <li><a href="/" class="nav-bar__link logo">le vin</a></li>
           <li class="nav-bar__part nav-bar__part_links">
@@ -17,13 +17,13 @@
           </li> 
           <li class="nav-bar__part">
               <div class="cart">
-                <a href="/basket/" class="basket__link">
+                <a href="basket.html" class="basket__link">
                   <picture class="nav-bar__cart-manager">
-                    <source srcset="../static/img/small_basket.svg"
+                    <source srcset="./static/img/small_basket.svg"
                             media="(max-width: 600px)">
-                    <source srcset="../static/img/basket.svg"
+                    <source srcset="./static/img/basket.svg"
                             media="(min-width: 600px)">
-                    <img src="../static/img/basket.svg" alt="basket_with_chosen_goods" class="nav-bar__basket">
+                    <img src="./static/img/basket.svg" alt="basket_with_chosen_goods" class="nav-bar__basket">
                   </picture>
                 </a>
                   <div class="cart__container">
@@ -45,11 +45,11 @@
                           <a href="#" class="sandwich__link">delivery</a>
                           <a href="/#shop" class="sandwich__link">shop</a>
                           <a href="#" class="sandwich__link">robots</a>
-                          <a href="/login" class="sandwich__link">sign in</a>
+                          <a href="login.html" class="sandwich__link">sign in</a>
                       </div>
                   </div>
               </div>
-              <a href="/login" class="nav-bar__link nav-bar__link_sing-in">sign in</a>
+              <a href="login.html" class="nav-bar__link nav-bar__link_sing-in">sign in</a>
           </li>
       </ul>
   </nav>
@@ -59,7 +59,7 @@
         
         <div class="basket__item">
             <div class="item">
-                <img src="../static/img/sampleWine.jpg" alt="excelent wine" class="item__image">
+                <img src="./static/img/sampleWine.jpg" alt="excelent wine" class="item__image">
                 <div class="item__info">
                     <h4 class="item__name">WineName</h4>
                     <div class="item__specs">
@@ -79,7 +79,7 @@
 
         <div class="basket__item">
             <div class="item">
-                <img src="../static/img/sampleWine.jpg" alt="excelent wine" class="item__image">
+                <img src="./static/img/sampleWine.jpg" alt="excelent wine" class="item__image">
                 <div class="item__info">
                     <h4 class="item__name">WineName</h4>
                     <div class="item__specs">
@@ -99,7 +99,7 @@
 
         <div class="basket__item">
             <div class="item">
-                <img src="../static/img/sampleWine.jpg" alt="excelent wine" class="item__image">
+                <img src="./static/img/sampleWine.jpg" alt="excelent wine" class="item__image">
                 <div class="item__info">
                     <h4 class="item__name">WineName</h4>
                     <div class="item__specs">
@@ -119,7 +119,7 @@
 
         <div class="basket__item">
             <div class="item">
-                <img src="../static/img/sampleWine.jpg" alt="excelent wine" class="item__image">
+                <img src="./static/img/sampleWine.jpg" alt="excelent wine" class="item__image">
                 <div class="item__info">
                     <h4 class="item__name">WineName</h4>
                     <div class="item__specs">
@@ -145,7 +145,7 @@
   <footer class="footer">
   <p class="footer__content">Personal project with a huge amount of effort put into it. Today - &infin;.</p>
   </footer>
-  <script src="../static/js/index.js"></script>
+  <script src="./static/js/index.js"></script>
 </body>
 </html>
 
